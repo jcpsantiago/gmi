@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: JCP Santiago
 Maintainer: JCP Santiago <joao.santiago@uni-tuebingen.de>
 Description: Functions to calculate various insulin sensitivity
-indexes from OGTT data.
-License: MIT
+    indexes from OGTT data.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
