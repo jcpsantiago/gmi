@@ -9,7 +9,7 @@
 #' @return An integer.
 #'
 #' @export
-nefaISI = function(i, n, b){
+nefaISI = function(bmi, i, n){
   60*exp(3.853 - 0.9*log(b[1])
          -0.205*log(i[1])
          -0.128*log(i[2])
