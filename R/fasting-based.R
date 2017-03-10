@@ -17,7 +17,7 @@ FIRI <- function(g, i){
 #'
 #' @return An integer.
 #' @export
-homaIR <- function(g, i){
+HOMA_IR <- function(g, i){
   (g * i)/22.5
 }
 

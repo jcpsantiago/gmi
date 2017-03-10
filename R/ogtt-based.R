@@ -26,7 +26,7 @@ gutt <- function(bw, g, i ){
 
 #' Matsuda Index.
 #'
-#' This function will calculate the Matsuda insulin sensitivity index.
+#' Calculate the Matsuda insulin sensitivity index.
 #'
 #' @param g A vector with ordered glucose values.
 #' @param i A vector with ordered insulin values.
@@ -56,7 +56,7 @@ matsuda <- function(g, i){
 #' @return An integer.
 #'
 #' @export
-nefaISI <- function(bmi, i, n){
+NEFA_ISI <- function(bmi, i, n){
   60*exp(3.853 - 0.9*log(bmi[1])
          -0.205*log(i[1])
          -0.128*log(i[2])
@@ -74,7 +74,7 @@ nefaISI <- function(bmi, i, n){
 #'
 #' @return An integer.
 #' @export
-stumvollisi <- function(bmi, g, i){
+stumvoll_ISI <- function(bmi, g, i){
   0.226 - 0.0032 * bmi - 0.0000645 * i - 0.00375 * g
 }
 
@@ -88,6 +88,6 @@ stumvollisi <- function(bmi, g, i){
 #' @return An integer.
 #'
 #' @export
-stumvollmcr <- function(bmi, i, g){
+stumvoll_MCR <- function(bmi, i, g){
   18.8 - 0.271 * bmi - 0.0052 * i - 0.27 * g
 }
