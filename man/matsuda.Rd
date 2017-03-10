@@ -15,7 +15,7 @@ matsuda(g, i)
 An integer.
 }
 \description{
-This function will calculate the Matsuda insulin sensitivity index.
+Calculate the Matsuda insulin sensitivity index.
 }
 \examples{
 glu <- c(4.6, 7.2, 9.8, 6.8, 5.16)

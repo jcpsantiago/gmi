@@ -35,7 +35,7 @@ gutt <- function(bw, g, i ){
 #' @examples
 #' glu <- c(4.6, 7.2, 9.8, 6.8, 5.16)
 #' ins <- c(33, 263, 797, 416, 274)
-#' mat_isi <- matsuda(glu, ins)
+#' isi_value <- matsuda(glu, ins)
 #'
 #'
 #'
