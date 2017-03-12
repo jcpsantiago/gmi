@@ -21,7 +21,7 @@ Fasting indices:
 
 OGTT indices:
 * [Cederholm](http://www.sciencedirect.com/science/article/pii/016882279090040Z)
-* [Gutt](http://www.sciencedirect.com/science/article/pii/S0168822799001163)
+* [ISI<sub>0,120</sub>](http://www.sciencedirect.com/science/article/pii/S0168822799001163)
 * [Matsuda](http://mmatsuda.diabetes-smc.jp/english.html)
 * [NEFA-ISI](http://link.springer.com/article/10.1007%2Fs00592-016-0930-5)
 * [Stumvoll-ISI](http://care.diabetesjournals.org/content/23/3/295)
