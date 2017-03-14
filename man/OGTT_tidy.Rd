@@ -10,7 +10,11 @@
   \item{weight_kg}{subject's weight, in kilograms}
   \item{bmi}{body-mass index, in kg/m^2}
   \item{timePoint}{minutes after the OGTT start; -60 is fasting}
-  ...
+  \item{glucose_mgl}{glucose values in mg/dl}
+  \item{insulin_pmoll}{insulin values in pmol/L (SI)}
+  \item{nefa_umolL}{NEFA values in µmol/L}
+  \item{glucose_mmoll}{glucose values in mmol/L (SI)}
+  \item{insulin_microU}{insulin values in µU/L}
 }}
 \usage{
 OGTT_tidy
