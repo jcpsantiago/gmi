@@ -1,7 +1,7 @@
 #' Calculate insulin sensitivity from OGTT values
 #'
-#' @param g Glucose.
-#' @param i Insulin.
+#' @param glu Glucose.
+#' @param ins Insulin.
 #' @param nefa NEFA.
 #' @param bmi Body-mass index.
 #' @param bw Body weight in kilos.
