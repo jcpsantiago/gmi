@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 ISIcalc.Rproj
+inst/doc
+backup
