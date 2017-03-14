@@ -1,0 +1,50 @@
+---
+title: "Calculating insulin sensitivity with surrogate indexes"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Calculating insulin sensitivity with surrogate indexes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Insulin sensitivity (IS) is a term that defines how well can insulin lower blood glucose.
+A person is said to be sensible to insulin if he or she can manage his or her blood
+glucose concentration, while keeping insulin within the normal range. When this is not
+observed, one talks about insulin *resistance*.
+
+The *gold standard* for measuring IS is the euglycemic hyperinsulinemic clamp. Introduced in 1966 by Andres and colleagues[^1], this technique is not used often outside of research, because it's costly, invasive and cumbersome. It involves a continuous intravenous infusion of insulin and a variable infusion of  glucose, the rate of which depends on the sensitivity of the individual.
+
+To make life easier, various researchers developed surrogate indexes. These require simple oral glucose tolerance test (OGTT) protocols or fasting blood values, which means they are both cheap and minimally invasive.
+
+
+## Fasting-based indexes
+
+The simplest of indexes make use of blood glucose and insulin values while fasting and, in the case of the revised Quantitative Insulin Sensitivity Check Index (QUICKI), non-esterified fatty acids (NEFA).
+
+The two most used indexes in this category are the QUICKI and the Homeostatic Model Assessment Insulin Resistance Index (HOMA-IR):
+
+**Original[^2] and revised[^3] QUICKI**
+  : The revised version uses fasting values for NEFA, in addition to glucose and insulin.
+  
+  $$\begin{aligned} 1/(log~glucose_0 + log~insulin_0 + log~{NEFA}_0) \end{aligned}$$
+
+**HOMA-IR**[^4]
+  : This index calculates insulin *resistance*, the opposite of insulin *sensitivity*. The HOMA-IR equation is only a linear approximation of the full model and its authors advise against using it, instead recommending one to use the [full computer model (HOMA-%S)](http://www.dtu.ox.ac.uk/homacalculator/).
+  
+  $$\begin{aligned} (glucose_0 * insulin_0) / 22.5 \end{aligned}$$
+
+
+## OGTT-based indexes
+
+
+
+
+
+[^1]: DeFronzo, R A, J D Tobin, and R Andres. 1979. “Glucose Clamp Technique: A Method for Quantifying Insulin Secretion and Resistance.” The American Journal of Physiology 237 (3): E214–23. doi:10.1089/dia.2011.0278.
+
+[^2]: Katz, Arie, Sridhar S. Nambi, Kieren Mather, A Baron, D Follmann, Gail Sullivan, and Michael J. Quon. 2000. “Quantitative Insuln Sensitivity Check Index: A Simple, Accurate Methof for Assessing Insulin Sensitivity in Humans.” J Clin Endocrinol Metab 85 (7): 2402–10. doi:10.1210/jcem.85.7.6661.
+
+[^3]: Perseghin, Gianluca, Andrea Caumo, Marianna Caloni, Giulio Testolin, and Livio Luzi. 2001. “Incorporation of the Fasting Plasma FFA Concentration into QUICKI Improves Its Association with Insulin Sensitivity in Nonobese Individuals.” Journal of Clinical Endocrinology and Metabolism 86 (10): 4776–81. doi:10.1210/jc.86.10.4776.
+
+[^4]: Matthews, D R, J P Hosker, A S Rudenski, B A Naylor, D F Treacher, and R C Turner. 1985. “Homeostasis Model Assessment: Insulin Resistance and β-Cell Function from Fasting Plasma Glucose and Insulin Concentrations in Man.” Diabetologia 28 (7): 412–19. doi:10.1007/BF00280883.

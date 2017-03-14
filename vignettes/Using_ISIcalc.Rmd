@@ -1,0 +1,91 @@
+---
+title: "Using the ISIcalc package"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the ISIcalc package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Below are some practical example showing how one can use the `ISIcalc` function to 
+calculate different insulin sensitivity indexes (ISI).
+
+The functions included in this package expect data to be in vectors, which makes 
+them to integrate with a [`tidyverse`](http://tidyverse.org/) workflow. Below you will also find examples
+in case your data is not in a observation-per-row format, or what is known as [*tidy*](http://vita.had.co.nz/papers/tidy-data.html).
+
+
+## Loading the package
+
+`ISIcalc` will load like any standard `R` package:
+```{r message = FALSE, warning = FALSE}
+library(ISIcalc)
+
+# dplyr will make it easy to apply the functions to whole datasets.
+library(dplyr)
+library(tidyr)
+```
+
+
+
+## Calculating ISI with tidy data
+
+If your data looks like the block below, continue reading this section, otherwise move on
+to the next section.
+
+```{r echo = FALSE}
+head(OGTT_tidy)
+```
+
+The data above has one observation per row, which is the ideal format to apply the `ISIcalc` functions quickly.
+
+As a first example I calculate the revised QUICKI for each subject in the included sample dataset `OGTT_tidy`. The `ISI_fasting` function will compute an index from fasting values; `glu` (glucose), `ins` (insulin) and `index` must be provided. Additionally, for the revised QUICKI index you will need to provide the `nefa` argument.
+
+```{r}
+OGTT_tidy %>%
+  filter(timePoint == -60) %>% # keep only fasting values
+  group_by(ID) %>% # calculate index for each subject
+  summarise(InsuSen = ISI_fasting(glu = glucose_mgdl, ins = insulin_microU, 
+                                  nefa = nefa_umolL, index = "Revised QUICKI"))
+```
+
+Since our sample dataset also includes values from a 2-hour, 5-sample oral glucose tolerance test (OGTT), we might also go ahead and calculate ISI based on that. I'll demonstrate this using for the NEFA-ISI index:
+
+```{r}
+OGTT_tidy %>%
+  filter(timePoint %in% c(0, 60, 120)) %>% # select only the relevant timepoints
+  arrange(timePoint) %>% # make sure the timepoints are correctly ordered
+  group_by(ID) %>% # calculate index for each subject
+  summarise(InsuSen = ISI_OGTT(ins = insulin_pmoll, nefa = nefa_umolL, 
+                               bmi = bmi[1], index = "NEFA-ISI")) # bmi[1] ensures only one value 
+                                                                  # is passed on to the function, 
+                                                                  # instead of a vector of 
+                                                                  # repeating values.
+```
+
+And so, as I previously demonstrated for fasting values, we obtain a data.frame with a column `InsuSen` (you can use whatever name you wish) with a NEFA-ISI value for each subject.
+
+Below another example involving a little more data wrangling to calculate the Stumvoll-ISI index:
+
+```{r}
+OGTT_tidy %>%
+  gather(parameter, value, c(glucose_mgdl:insulin_microU)) %>% # gather all the columns into a single one
+  filter((timePoint == 90 & parameter == "glucose_mgdl") | (timePoint == 120 & parameter == "insulin_microU")) %>% # select only the relevant timepoints
+  group_by(ID) %>% # calculate index for each subject
+  summarise(InsuSen = ISI_OGTT(glu = value[parameter == "glucose_mgdl"],
+                               ins = value[parameter == "insulin_microU"], 
+                               bmi = bmi[1], index = "Stumvoll-ISI"))
+```
+
+
+
+## Dataset in subject-per-row format
+
+In case your data is not tidy with one observation per row, we'll have to use a bit more `dplyr` code to rearrange it. Below is an example dataset:
+
+```{r}
+#head(OGTT_untidy)
+```
+
+**TODO**
