@@ -9,8 +9,8 @@ paste a function.
 
 You can install it with
 ``` r
-# install.packages("ghit")
-ghit::install_github("jcpsantiago/ISIcalc")
+# install.packages("devtools")
+devtools::install_github("jcpsantiago/ISIcalc")
 ```
 ## Indexes
 
