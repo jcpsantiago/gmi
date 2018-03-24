@@ -1,8 +1,7 @@
+[![Travis](https://img.shields.io/travis/jcpsantiago/ISICalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/ISIcalc)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true&style=flat-square)
+
 # ISIcalc
-
-[![Build Status](https://travis-ci.org/jcpsantiago/ISIcalc.svg?branch=master)](https://travis-ci.org/jcpsantiago/ISIcalc)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 
 ISIcalc bundles popular insulin sensitivity indexes, so you don't need an extra excel sheet or to copy
 paste a function.
