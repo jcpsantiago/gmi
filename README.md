@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/jcpsantiago/ISICalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/ISIcalc)
+[![Travis](https://img.shields.io/travis/jcpsantiago/ISIcalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/ISIcalc)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true&style=flat-square)
 
 # ISIcalc
