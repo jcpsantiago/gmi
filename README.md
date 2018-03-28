@@ -1,9 +1,9 @@
 [![Travis](https://img.shields.io/travis/jcpsantiago/ISIcalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/ISIcalc)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true&style=flat-square)
 
-# ISIcalc
+# IScalc
 
-ISIcalc bundles popular insulin sensitivity indexes, so you don't need an extra excel sheet or to copy
+IScalc bundles popular insulin sensitivity indexes, so you don't need an extra excel sheet or to copy
 paste a function.
 
 You can install it with
