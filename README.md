@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/jcpsantiago/ISIcalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/ISIcalc)
+[![Travis](https://img.shields.io/travis/jcpsantiago/IScalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/IScalc)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true&style=flat-square)
 
 # IScalc
@@ -9,7 +9,7 @@ paste a function.
 You can install it with
 ``` r
 # install.packages("devtools")
-devtools::install_github("jcpsantiago/ISIcalc")
+devtools::install_github("jcpsantiago/IScalc")
 ```
 ## Indexes
 
