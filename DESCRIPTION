@@ -16,5 +16,6 @@ Suggests:
     rmarkdown,
     dplyr,
     tidyr,
-    testthat
+    testthat,
+    covr
 VignetteBuilder: knitr
