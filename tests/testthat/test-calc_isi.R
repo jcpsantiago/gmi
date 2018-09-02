@@ -7,8 +7,10 @@ test_that("fail if more than one index is provided", {
 })
 
 test_that("warn if more than one value of bmi or body_weight", {
-  expect_warning(calc_isi(bmi = c(20, 22), index = "Matsuda"))
-  expect_warning(calc_isi(bmi = 24, body_weight = c(68, 90), index = "Gutt"))
+  expect_warning(calc_isi(glu = c(1, 2, 3, 4, 5),
+                          ins = c(1, 2, 3, 4, 5),
+                          bmi = c(20, 25),
+                          index = "Matsuda"))
 })
 
 test_that("fail if index is not correct", {

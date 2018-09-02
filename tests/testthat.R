@@ -1,5 +1,5 @@
 library(testthat)
-library(ISIcalc)
+library(IScalc)
 
 
-test_check("ISIcalc")
+test_check("IScalc")
