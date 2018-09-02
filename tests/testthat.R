@@ -1,4 +1,5 @@
 library(testthat)
 library(ISIcalc)
 
-#test_check("ISIcalc")
+
+test_check("ISIcalc")
