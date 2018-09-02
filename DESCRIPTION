@@ -1,11 +1,11 @@
-Package: ISIcalc
+Package: IScalc
 Type: Package
 Title: Calculate Insulin Sensitivity Indexes
 Version: 0.1.0
 Author: JCP Santiago
 Maintainer: JCP Santiago <joao.santiago@uni-tuebingen.de>
 Description: Functions to calculate various insulin sensitivity
-    indexes from OGTT data.
+    indexes from OGTT and fasting data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
