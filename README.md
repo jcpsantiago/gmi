@@ -1,4 +1,5 @@
 [![Travis](https://img.shields.io/travis/jcpsantiago/IScalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/IScalc)
+[![Coverage status](https://codecov.io/gh/jcpsantiago/IScalc/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/IScalc?branch=master)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true&style=flat-square)
 
 # IScalc
@@ -22,7 +23,7 @@ Fasting indices:
 
 OGTT indices:
 * [Cederholm](http://www.sciencedirect.com/science/article/pii/016882279090040Z)
-* [ISI<sub>0,120</sub>](http://www.sciencedirect.com/science/article/pii/S0168822799001163)
+* [Gutt (ISI<sub>0,120</sub>)](http://www.sciencedirect.com/science/article/pii/S0168822799001163)
 * [Matsuda (Composite Index)](http://mmatsuda.diabetes-smc.jp/english.html)
 * [NEFA-ISI](http://link.springer.com/article/10.1007%2Fs00592-016-0930-5)
 * [Stumvoll-ISI](http://care.diabetesjournals.org/content/23/3/295)
