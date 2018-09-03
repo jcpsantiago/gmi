@@ -2,7 +2,7 @@
 #'
 #' @param ... R objects to check.
 #'
-#' @return a logical.
+#' @return A logical.
 #'
 #' @examples
 is_numeric_or_null <- function(...){

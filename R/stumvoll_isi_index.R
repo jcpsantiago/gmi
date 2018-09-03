@@ -6,7 +6,7 @@
 #'     (0', 30', 60', 90', 120').
 #' @param bmi  Body-mass index.
 #'
-#' @return
+#' @return A double.
 #'
 #' @examples
 stumvoll_isi_index <- function(glu, ins, bmi){

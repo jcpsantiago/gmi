@@ -16,7 +16,7 @@ stumvoll_mcr_index(glu, ins, bmi)
 \item{bmi}{Body-mass index.}
 }
 \value{
-
+A double.
 }
 \description{
 Stumvoll MCR index

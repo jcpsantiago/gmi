@@ -4,7 +4,7 @@
 #' @param ins  The value of fasting insulin.
 #' @param nefa The value of fasting NEFA.
 #'
-#' @return
+#' @return A double.
 #'
 #' @examples
 revised_quicki_index <- function(glu, ins, nefa){

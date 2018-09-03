@@ -12,7 +12,7 @@ firi_index(glu, ins)
 \item{ins}{The value of fasting insulin.}
 }
 \value{
-
+A double.
 }
 \description{
 FIRI index

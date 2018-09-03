@@ -12,7 +12,7 @@ homa_ir_index(glu, ins)
 \item{ins}{The value of fasting insulin.}
 }
 \value{
-
+A double.
 }
 \description{
 HOMA-IR index

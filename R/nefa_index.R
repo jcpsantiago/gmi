@@ -4,7 +4,7 @@
 #' @param bmi  Body-mass index.
 #' @param nefa An ordered vector of NEFA values.
 #'
-#' @return a double.
+#' @return A double.
 #'
 #' @examples
 nefa_index <- function(ins, bmi, nefa) {

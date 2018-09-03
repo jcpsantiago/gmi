@@ -10,7 +10,7 @@ is_numeric_or_null(...)
 \item{...}{R objects to check.}
 }
 \value{
-a logical.
+A logical.
 }
 \description{
 Numeric or NULL objects

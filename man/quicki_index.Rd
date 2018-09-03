@@ -12,7 +12,7 @@ quicki_index(glu, ins)
 \item{ins}{The value of fasting insulin.}
 }
 \value{
-
+A double.
 }
 \description{
 QUICKI index

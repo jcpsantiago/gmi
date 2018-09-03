@@ -14,7 +14,7 @@ revised_quicki_index(glu, ins, nefa)
 \item{nefa}{The value of fasting NEFA.}
 }
 \value{
-
+A double.
 }
 \description{
 Revised QUICKI index

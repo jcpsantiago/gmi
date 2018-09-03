@@ -14,7 +14,7 @@ cederholm_index(glu, ins, body_weight)
 \item{body_weight}{Body weight in kg.}
 }
 \value{
-a double.
+A double.
 }
 \description{
 Cederholm index

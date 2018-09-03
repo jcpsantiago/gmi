@@ -5,7 +5,7 @@
 #' @param ins  An ordered vector of insulin values.
 #'     (0', 30', 60', 90', 120').
 #'
-#' @return a double.
+#' @return A double.
 #'
 #' @examples
 matsuda_index <- function(glu, ins) {

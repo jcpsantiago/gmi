@@ -14,7 +14,7 @@ matsuda_index(glu, ins)
 (0', 30', 60', 90', 120').}
 }
 \value{
-a double.
+A double.
 }
 \description{
 Matsuda Index (Composite index)

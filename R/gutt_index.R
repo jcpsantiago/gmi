@@ -4,7 +4,7 @@
 #' @param ins  An ordered vector of insulin values.
 #' @param body_weight Body weight in kg.
 #'
-#' @return a double.
+#' @return A double.
 #'
 #' @examples
 gutt_index <- function(glu, ins, body_weight) {

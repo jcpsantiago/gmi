@@ -14,7 +14,7 @@ nefa_index(ins, bmi, nefa)
 \item{nefa}{An ordered vector of NEFA values.}
 }
 \value{
-a double.
+A double.
 }
 \description{
 NEFA insulin index

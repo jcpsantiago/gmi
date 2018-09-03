@@ -16,7 +16,7 @@ stumvoll_isi_index(glu, ins, bmi)
 \item{bmi}{Body-mass index.}
 }
 \value{
-
+A double.
 }
 \description{
 Stumvoll ISI index

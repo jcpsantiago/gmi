@@ -23,7 +23,7 @@ calc_isi(glu = NULL, ins = NULL, nefa = NULL, bmi = NULL,
 "Stumvoll-ISI" or "Stumvoll-MCR".}
 }
 \value{
-An integer.
+A double.
 }
 \description{
 Calculate insulin-sensitivity index

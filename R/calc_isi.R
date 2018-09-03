@@ -9,7 +9,7 @@
 #'     "Cederholm", "Gutt" (aka "ISI 0,120"), "Matsuda", "NEFA-ISI", 
 #'     "Stumvoll-ISI" or "Stumvoll-MCR".
 #'
-#' @return An integer.
+#' @return A double.
 #' @export
 #'
 #' @examples
@@ -28,10 +28,10 @@ calc_isi <- function(glu = NULL, ins = NULL, nefa = NULL,
     warning("Only the first value of body_weight was used!")
   
   if(length(index) > 1)
-    stop("Don't be greedy! Only one index per function call, please.") 
+    stop("Don't be greedy! Only one index per function call, please") 
   
   if(!(index %in% allowed_indexes))
-    stop(index, " is not a valid index, or not yet implemented.")
+    stop(index, " is not a valid index, or not yet implemented")
   
   ## some variables need to be numeric, or NULL if the index doesn't need it
   stopifnot(is_numeric_or_null(glu, ins, nefa, bmi, body_weight))

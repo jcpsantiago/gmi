@@ -3,7 +3,7 @@
 #' @param glu  The value of fasting glucose.
 #' @param ins  The value of fasting insulin.
 #'
-#' @return
+#' @return A double.
 #'
 #' @examples
 quicki_index <- function(glu, ins){

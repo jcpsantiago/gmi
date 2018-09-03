@@ -3,7 +3,7 @@
 #' @param glu  The value of fasting glucose.
 #' @param ins  The value of fasting insulin.
 #'
-#' @return
+#' @return A double.
 #'
 #' @examples
 homa_ir_index <- function(glu, ins){
