@@ -21,17 +21,18 @@ calc_isi <- function(glu = NULL, ins = NULL, nefa = NULL,
                        "Cederholm", "Gutt", "Matsuda", "NEFA-ISI", 
                        "Stumvoll-ISI", "Stumvoll-MCR")
   
+  if(length(index) > 1)
+    stop("Don't be greedy! Only one index per function call, please") 
+  
+  if(!(index %in% allowed_indexes))
+    stop(index, " is not a valid index, or not yet implemented")
+  
   if(length(bmi) > 1)
     warning("Only the first value of bmi was used!")
   
   if(length(body_weight) > 1)
     warning("Only the first value of body_weight was used!")
   
-  if(length(index) > 1)
-    stop("Don't be greedy! Only one index per function call, please") 
-  
-  if(!(index %in% allowed_indexes))
-    stop(index, " is not a valid index, or not yet implemented")
   
   ## some variables need to be numeric, or NULL if the index doesn't need it
   stopifnot(is_numeric_or_null(glu, ins, nefa, bmi, body_weight))
