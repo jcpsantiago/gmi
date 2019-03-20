@@ -7,8 +7,8 @@
 #' @return A double.
 #'
 #' @examples
-revised_quicki_index <- function(glu, ins, nefa){
+revised_quicki_index <- function(glu, ins, nefa) {
   stopifnot(length(glu) == 1 && length(ins) == 1 && length(nefa) == 1)
-  
-  1/(log(glu) + log(ins) + log(nefa))
+
+  1 / (log(glu) + log(ins) + log(nefa))
 }

@@ -9,8 +9,8 @@
 #' @return A double.
 #'
 #' @examples
-stumvoll_mcr_index <- function(glu, ins, bmi){
+stumvoll_mcr_index <- function(glu, ins, bmi) {
   ## ADD TESTS FOR LENGTH!
-  
+
   18.8 - (0.271 * bmi) - (0.0052 * ins) - (0.27 * glu)
 }

@@ -13,4 +13,3 @@ matsuda_index <- function(glu, ins) {
 
   10000 / sqrt(glu[1] * ins[1] * mean(glu) * mean(ins))
 }
-

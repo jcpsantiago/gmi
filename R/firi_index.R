@@ -6,8 +6,8 @@
 #' @return A double.
 #'
 #' @examples
-firi_index <- function(glu, ins){
+firi_index <- function(glu, ins) {
   stopifnot(length(glu) == 1 && length(ins) == 1)
-  
-  (glu * ins)/25
+
+  (glu * ins) / 25
 }

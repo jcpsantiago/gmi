@@ -6,8 +6,8 @@
 #' @return A double.
 #'
 #' @examples
-quicki_index <- function(glu, ins){
+quicki_index <- function(glu, ins) {
   stopifnot(length(glu) == 1 && length(ins) == 1)
-  
-  1/(log(glu) + log(ins))
+
+  1 / (log(glu) + log(ins))
 }

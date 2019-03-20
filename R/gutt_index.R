@@ -9,8 +9,8 @@
 #' @examples
 gutt_index <- function(glu, ins, body_weight) {
 
-  ## ADD TEST FOR glu and ins length!!
-  
+  stopifnot(length(glu) == 2 && length(ins) == 2 && length(body_weight) == 1)
+
   # glucose uptake rate in peripheral tissues
   m <- (75000 + ((glu[1] - glu[2]) * 0.19 * body_weight[1])) / 120
 
@@ -20,4 +20,3 @@ gutt_index <- function(glu, ins, body_weight) {
   # insulin sensitivity index
   mcr / log(mean(ins))
 }
-

@@ -6,8 +6,8 @@
 #' @return A double.
 #'
 #' @examples
-homa_ir_index <- function(glu, ins){
+homa_ir_index <- function(glu, ins) {
   stopifnot(length(glu) == 1 && length(ins) == 1)
-  
-  (glu * ins)/22.5
+
+  (glu * ins) / 22.5
 }
