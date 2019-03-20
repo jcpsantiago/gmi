@@ -34,4 +34,3 @@ OGTT indices:
 ## TODO
 
 * Implement [OGIS](http://webmet.pd.cnr.it/ogis/index.php).
-* Reimplement the functions using switch
