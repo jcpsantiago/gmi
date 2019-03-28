@@ -15,7 +15,7 @@ devtools::install_github("jcpsantiago/gmi")
 ```
 ## Indexes
 
-Comparisons between each index and the hyperinsulinaemic-euglycaemic clamp are discussed in [Otten et al., 2014](http://download.springer.com/static/pdf/205/art%253A10.1007%252Fs00125-014-3285-x.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs00125-014-3285-x&token2=exp=1489136261~acl=%2Fstatic%2Fpdf%2F205%2Fart%25253A10.1007%25252Fs00125-014-3285-x.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs00125-014-3285-x*~hmac=a11b3ad4da39decb53ce944da0d69e84c4b3030e4fa3e2de69f779112dbbf3c0)
+Comparisons between each index and the hyperinsulinaemic-euglycaemic clamp are discussed in [Otten et al., 2014](https://www.ncbi.nlm.nih.gov/pubmed/24891021)
 
 The following indices are currently implemented:
 
