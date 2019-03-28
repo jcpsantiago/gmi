@@ -1,6 +1,6 @@
-[![Travis](https://img.shields.io/travis/jcpsantiago/IScalc.svg)](https://travis-ci.org/jcpsantiago/IScalc)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jcpsantiago/IScalc?branch=master&svg=true)](https://ci.appveyor.com/project/jcpsantiago/IScalc)
-[![Coverage status](https://codecov.io/gh/jcpsantiago/IScalc/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/IScalc?branch=master)
+[![Travis](https://img.shields.io/travis/jcpsantiago/gmi.svg)](https://travis-ci.org/jcpsantiago/gmi)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jcpsantiago/gmi?branch=master&svg=true)](https://ci.appveyor.com/project/jcpsantiago/gmi)
+[![Coverage status](https://codecov.io/gh/jcpsantiago/gmi/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/gmi?branch=master)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true)
 
 # gmi
