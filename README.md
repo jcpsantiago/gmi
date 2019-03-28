@@ -1,21 +1,23 @@
-[![Travis](https://img.shields.io/travis/jcpsantiago/IScalc.svg?style=flat-square)](https://travis-ci.org/jcpsantiago/IScalc)
+[![Travis](https://img.shields.io/travis/jcpsantiago/IScalc.svg)](https://travis-ci.org/jcpsantiago/IScalc)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jcpsantiago/IScalc?branch=master&svg=true)](https://ci.appveyor.com/project/jcpsantiago/IScalc)
 [![Coverage status](https://codecov.io/gh/jcpsantiago/IScalc/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/IScalc?branch=master)
-![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true&style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true)
 
-# IScalc
+# gmi
 
-IScalc bundles popular insulin sensitivity indexes, so you don't need an extra excel sheet or to copy
-paste a function.
+`gmi` (**g**lucose **m**etabolism **i**ndices) is an R package that bundles popular insulin sensitivity indexes, so you don't need an extra excel
+sheet or to copy-paste a function.
 
 You can install it with
 ``` r
 # install.packages("devtools")
-devtools::install_github("jcpsantiago/IScalc")
+devtools::install_github("jcpsantiago/gmi")
 ```
 ## Indexes
 
 Comparisons between each index and the hyperinsulinaemic-euglycaemic clamp are discussed in [Otten et al., 2014](http://download.springer.com/static/pdf/205/art%253A10.1007%252Fs00125-014-3285-x.pdf?originUrl=http%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2Fs00125-014-3285-x&token2=exp=1489136261~acl=%2Fstatic%2Fpdf%2F205%2Fart%25253A10.1007%25252Fs00125-014-3285-x.pdf%3ForiginUrl%3Dhttp%253A%252F%252Flink.springer.com%252Farticle%252F10.1007%252Fs00125-014-3285-x*~hmac=a11b3ad4da39decb53ce944da0d69e84c4b3030e4fa3e2de69f779112dbbf3c0)
+
+The following indices are currently implemented:
 
 Fasting indices:
 * [FIRI](http://www.thelancet.com/journals/lancet/article/PIIS0140-6736(96)90126-9/fulltext)
