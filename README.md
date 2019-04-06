@@ -2,6 +2,9 @@
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jcpsantiago/gmi?branch=master&svg=true)](https://ci.appveyor.com/project/jcpsantiago/gmi)
 [![Coverage status](https://codecov.io/gh/jcpsantiago/gmi/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/gmi?branch=master)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true)
+[![DOI](https://zenodo.org/badge/84201070.svg)](https://zenodo.org/badge/latestdoi/84201070)
+
+
 
 # gmi
 
@@ -13,6 +16,10 @@ You can install it with
 # install.packages("devtools")
 devtools::install_github("jcpsantiago/gmi")
 ```
+
+If you use `gmi` please cite it using the DOI: 10.5281/zenodo.2631368.
+
+
 ## Indexes
 
 Comparisons between each index and the hyperinsulinaemic-euglycaemic clamp are discussed in [Otten et al., 2014](https://www.ncbi.nlm.nih.gov/pubmed/24891021)
