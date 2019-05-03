@@ -1,25 +1,26 @@
 ---
-title: "Using the IScalc package"
+title: "Getting started with the gmi package"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Using the IScalc package}
+  %\VignetteIndexEntry{Getting started with the gmi package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-Below are some practical example showing how one can use the `IScalc` function to 
+Below are some practical example showing how one can use the `gmi` function to
 calculate different insulin sensitivity indexes (ISI).
 
-The functions included in this package expect data to be in vectors, which makes 
+The functions included in this package expect data to be in vectors, which makes
 them to integrate with a [`tidyverse`](http://tidyverse.org/) workflow. Below you will also find examples
 in case your data is not in a observation-per-row format, or what is known as [*tidy*](http://vita.had.co.nz/papers/tidy-data.html).
 
 
 ## Loading the package
 
-`IScalc` will load like any standard `R` package:
-```{r message = FALSE, warning = FALSE}
+`gmi` will load like any standard `R` package:
+
+```{r, message = FALSE, warning = FALSE}
 library(gmi)
 
 # dplyr will make it easy to apply the functions to whole datasets.
@@ -35,11 +36,10 @@ If your data looks like the block below, continue reading this section, otherwis
 to the next section.
 
 ```{r echo = FALSE}
-data("OGTT_long")
 head(OGTT_long)
 ```
 
-The data above has one observation per row, which is the ideal format to apply the `IScalc` functions quickly.
+The data above has one observation per row, which is the ideal format to apply the `gmi` functions quickly.
 
 As a first example I calculate the revised QUICKI for each subject in the included sample dataset `OGTT_long`. The `ISI_fasting` function will compute an index from fasting values; `glu` (glucose), `ins` (insulin) and `index` must be provided. Additionally, for the revised QUICKI index you will need to provide the `nefa` argument.
 
@@ -47,7 +47,7 @@ As a first example I calculate the revised QUICKI for each subject in the includ
 # OGTT_long %>%
 #   filter(timePoint == -60) %>% # keep only fasting values
 #   group_by(ID) %>% # calculate index for each subject
-#   summarise(InsuSen = ISI_fasting(glu = glucose_mgdl, ins = insulin_microU, 
+#   summarise(InsuSen = ISI_fasting(glu = glucose_mgdl, ins = insulin_microU,
 #                                   nefa = nefa_umolL, index = "Revised QUICKI"))
 ```
 
@@ -58,10 +58,10 @@ Since our sample dataset also includes values from a 2-hour, 5-sample oral gluco
 #   filter(timePoint %in% c(0, 60, 120)) %>% # select only the relevant timepoints
 #   arrange(timePoint) %>% # make sure the timepoints are correctly ordered
 #   group_by(ID) %>% # calculate index for each subject
-#   summarise(InsuSen = ISI_OGTT(ins = insulin_pmoll, nefa = nefa_umolL, 
-#                                bmi = bmi[1], index = "NEFA-ISI")) # bmi[1] ensures only one value 
-                                                                  # is passed on to the function, 
-                                                                  # instead of a vector of 
+#   summarise(InsuSen = ISI_OGTT(ins = insulin_pmoll, nefa = nefa_umolL,
+#                                bmi = bmi[1], index = "NEFA-ISI")) # bmi[1] ensures only one value
+                                                                  # is passed on to the function,
+                                                                  # instead of a vector of
                                                                   # repeating values.
 ```
 
@@ -75,7 +75,7 @@ Below another example involving a little more data wrangling to calculate the St
 #   filter((timePoint == 90 & parameter == "glucose_mgdl") | (timePoint == 120 & parameter == "insulin_microU")) %>% # select only the relevant timepoints
 #   group_by(ID) %>% # calculate index for each subject
 #   summarise(InsuSen = ISI_OGTT(glu = value[parameter == "glucose_mgdl"],
-#                                ins = value[parameter == "insulin_microU"], 
+#                                ins = value[parameter == "insulin_microU"],
 #                                bmi = bmi[1], index = "Stumvoll-ISI"))
 ```
 
