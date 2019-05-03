@@ -5,6 +5,7 @@
 [![Coverage status](https://codecov.io/gh/jcpsantiago/gmi/branch/master/graph/badge.svg)](https://codecov.io/github/jcpsantiago/gmi?branch=master)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?longCache=true)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![DOI](https://zenodo.org/badge/84201070.svg)](https://zenodo.org/badge/latestdoi/84201070)
 
 `gmi` (**g**lucose **m**etabolism **i**ndices) is an R package that bundles
 popular insulin sensitivity and beta cell function indexes, so you don't need an
@@ -18,6 +19,8 @@ Only the developmental version is currently available.
 # install.packages("remotes")
 remotes::install_github("jcpsantiago/gmi")
 ```
+
+If you use `gmi` please cite it using the DOI: 10.5281/zenodo.2631368.
 
 ## Indexes
 
