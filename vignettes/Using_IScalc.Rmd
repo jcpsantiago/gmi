@@ -20,7 +20,7 @@ in case your data is not in a observation-per-row format, or what is known as [*
 
 `IScalc` will load like any standard `R` package:
 ```{r message = FALSE, warning = FALSE}
-library(IScalc)
+library(gmi)
 
 # dplyr will make it easy to apply the functions to whole datasets.
 library(dplyr)
@@ -35,15 +35,16 @@ If your data looks like the block below, continue reading this section, otherwis
 to the next section.
 
 ```{r echo = FALSE}
-head(OGTT_tidy)
+data("OGTT_long")
+head(OGTT_long)
 ```
 
 The data above has one observation per row, which is the ideal format to apply the `IScalc` functions quickly.
 
-As a first example I calculate the revised QUICKI for each subject in the included sample dataset `OGTT_tidy`. The `ISI_fasting` function will compute an index from fasting values; `glu` (glucose), `ins` (insulin) and `index` must be provided. Additionally, for the revised QUICKI index you will need to provide the `nefa` argument.
+As a first example I calculate the revised QUICKI for each subject in the included sample dataset `OGTT_long`. The `ISI_fasting` function will compute an index from fasting values; `glu` (glucose), `ins` (insulin) and `index` must be provided. Additionally, for the revised QUICKI index you will need to provide the `nefa` argument.
 
 ```{r}
-# OGTT_tidy %>%
+# OGTT_long %>%
 #   filter(timePoint == -60) %>% # keep only fasting values
 #   group_by(ID) %>% # calculate index for each subject
 #   summarise(InsuSen = ISI_fasting(glu = glucose_mgdl, ins = insulin_microU, 
@@ -53,7 +54,7 @@ As a first example I calculate the revised QUICKI for each subject in the includ
 Since our sample dataset also includes values from a 2-hour, 5-sample oral glucose tolerance test (OGTT), we might also go ahead and calculate ISI based on that. I'll demonstrate this using for the NEFA-ISI index:
 
 ```{r}
-# OGTT_tidy %>%
+# OGTT_long %>%
 #   filter(timePoint %in% c(0, 60, 120)) %>% # select only the relevant timepoints
 #   arrange(timePoint) %>% # make sure the timepoints are correctly ordered
 #   group_by(ID) %>% # calculate index for each subject
@@ -69,7 +70,7 @@ And so, as I previously demonstrated for fasting values, we obtain a data.frame 
 Below another example involving a little more data wrangling to calculate the Stumvoll-ISI index:
 
 ```{r}
-# OGTT_tidy %>%
+# OGTT_long %>%
 #   gather(parameter, value, c(glucose_mgdl:insulin_microU)) %>% # gather all the columns into a single one
 #   filter((timePoint == 90 & parameter == "glucose_mgdl") | (timePoint == 120 & parameter == "insulin_microU")) %>% # select only the relevant timepoints
 #   group_by(ID) %>% # calculate index for each subject

@@ -1,4 +1,4 @@
-Package: IScalc
+Package: gmi
 Type: Package
 Title: Calculate Insulin Sensitivity Indexes
 Version: 0.1.0
