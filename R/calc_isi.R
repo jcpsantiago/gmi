@@ -54,6 +54,7 @@ calc_isi <- function(glu = NULL, ins = NULL, nefa = NULL,
     ## ogtt-based
     Cederholm = cederholm_index(glu, ins, body_weight),
     Gutt = gutt_index(glu, ins, body_weight),
+    `ISSI-2` = beta_cell_fun_index(glu, ins),
     Matsuda = matsuda_index(glu, ins),
     `NEFA-ISI` = nefa_index(ins, bmi, nefa),
     `Stumvoll-ISI` = stumvoll_isi_index(glu, ins, bmi),

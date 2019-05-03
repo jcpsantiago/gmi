@@ -1,4 +1,4 @@
-#' Sample tidy data from an OGTT in tidy.
+#' Sample tidy data from an OGTT in a tidy long form.
 #'
 #' A dataset containing fasting and 2-hour OGTT values.
 #'
@@ -14,4 +14,4 @@
 #'   \item{glucose_mmoll}{glucose values in mmol/L (SI)}
 #'   \item{insulin_microU}{insulin values in µU/L}
 #' }
-"OGTT_tidy"
+"OGTT_long"
